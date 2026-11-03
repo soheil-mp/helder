@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a new capability or an improvement.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who needs this and what can they not do today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should Helder do? Mention sources, norms or standards involved.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: It needs no machine learning, model APIs or personal data (ADR-0002, ADR-0020).
+          required: true
+        - label: It fits within the data budgets (ADR-0003) or explains why the budget should change.
+          required: true

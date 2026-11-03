@@ -56,7 +56,7 @@ gets better with each step.
 |  | [M27 Documentation, write-up and 1.0](#m27--documentation-write-up-and-10) | 8 | 28 | v1.0.0 |
 | | **Total** | **308** | **1,049** | |
 
-**Done:** 39 h (9 of 308 items). **Open:** 1,010 h. With 15 % contingency the total is about 1,206 hours:
+**Done:** 41 h (10 of 308 items). **Open:** 1,008 h. With 15 % contingency the total is about 1,206 hours:
 roughly 10 to 11 months at 25 hours a week.
 <!-- summary:end -->
 
@@ -197,7 +197,7 @@ released automatically.
 - [ ] **M0.10** (3 h) Documentation site with Zensical in the Diátaxis structure (tutorials,
   how-to guides, reference, explanation), research and ADR pages, deployed to GitHub Pages by a
   workflow.
-- [ ] **M0.11** (2 h) Community files: CONTRIBUTING, CODE_OF_CONDUCT, SECURITY (private
+- [x] **M0.11** (2 h) Community files: CONTRIBUTING, CODE_OF_CONDUCT, SECURITY (private
   vulnerability reporting), issue forms (bug, feature, spike, data issue), pull request template
   and CODEOWNERS.
 - [ ] **M0.12** (2 h) Releases: release-please with Conventional Commits, CHANGELOG and a

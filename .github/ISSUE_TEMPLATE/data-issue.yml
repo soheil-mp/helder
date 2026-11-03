@@ -1,0 +1,35 @@
+name: Data issue
+description: A value, flag, norm or source behaves unexpectedly.
+labels: [data-source]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - A value looks wrong (sensor or laboratory)
+        - A quality flag looks wrong
+        - A norm, legal force or citation looks wrong
+        - A source changed (endpoint, schema, codes, terms)
+        - Attribution is missing or wrong
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Station, series or dataset
+      placeholder: "rws:kinderdijk.lek, chloride at -500 cm"
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: Time (UTC)
+      placeholder: "2026-11-03T09:40Z"
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: What you expected and why, with a link to the source document or service.
+    validations:
+      required: true
