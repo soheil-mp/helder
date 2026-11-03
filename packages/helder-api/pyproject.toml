@@ -1,6 +1,6 @@
 [project]
 name = "helder-api"
-version = "0.0.0"
+version = "0.1.0"
 description = "FastAPI service for Helder's derived products."
 readme = "README.md"
 requires-python = ">=3.13,<3.14"

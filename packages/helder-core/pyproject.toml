@@ -1,6 +1,6 @@
 [project]
 name = "helder-core"
-version = "0.0.0"
+version = "0.1.0"
 description = "Domain types, units, time and identifiers shared by every package (pure, no I/O)."
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
