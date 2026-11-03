@@ -56,7 +56,7 @@ gets better with each step.
 |  | [M27 Documentation, write-up and 1.0](#m27--documentation-write-up-and-10) | 8 | 28 | v1.0.0 |
 | | **Total** | **308** | **1,049** | |
 
-**Done:** 34 h (8 of 308 items). **Open:** 1,015 h. With 15 % contingency the total is about 1,206 hours:
+**Done:** 39 h (9 of 308 items). **Open:** 1,010 h. With 15 % contingency the total is about 1,206 hours:
 roughly 10 to 11 months at 25 hours a week.
 <!-- summary:end -->
 
@@ -188,7 +188,7 @@ released automatically.
 - [x] **M0.7** (3 h) Dependency policy: `tools/check_dependencies.py` fails on licences outside
   the allowlist and on any ML library, model runtime, model API client or vector database;
   runs in pre-commit and CI. Renovate: grouped, scheduled, digests pinned.
-- [ ] **M0.8** (5 h) GitHub Actions CI: lint, type check, hooks and tests (matrix by marker),
+- [x] **M0.8** (5 h) GitHub Actions CI: lint, type check, hooks and tests (matrix by marker),
   uv cache, concurrency groups, read-only default permissions, actions pinned by commit SHA,
   coverage in the job summary, gitleaks over the full history and one aggregate `CI passed`
   check; a `require-ci` ruleset.
