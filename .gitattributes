@@ -1,0 +1,17 @@
+# Normalise line endings in the repository; check out with LF everywhere.
+* text=auto eol=lf
+
+# Lock files and generated files: no diffs in reviews, merged as a whole.
+uv.lock linguist-generated=true -diff
+pnpm-lock.yaml linguist-generated=true -diff
+CHANGELOG.md linguist-generated=true
+
+# Recorded HTTP fixtures are test data, not source.
+tests/fixtures/** linguist-vendored=true
+
+# Binary formats that must never be treated as text.
+*.parquet binary
+*.duckdb binary
+*.gpkg binary
+*.png binary
+*.svg text
