@@ -56,7 +56,7 @@ gets better with each step.
 |  | [M27 Documentation, write-up and 1.0](#m27--documentation-write-up-and-10) | 8 | 28 | v1.0.0 |
 | | **Total** | **308** | **1,049** | |
 
-**Done:** 48 h (13 of 308 items). **Open:** 1,001 h. With 15 % contingency the total is about 1,206 hours:
+**Done:** 51 h (14 of 308 items). **Open:** 998 h. With 15 % contingency the total is about 1,206 hours:
 roughly 10 to 11 months at 25 hours a week.
 <!-- summary:end -->
 
@@ -258,7 +258,7 @@ tagged.
   with English labels and UCUM mappings for the codes Helder uses.
 - [ ] **M2.3** (4 h) Units with Pint: custom units (`DIMSLS`, `RFU`, `NTU`, `n/l`,
   `cfu/100ml`, `mS/m`), conversions and Hypothesis round-trip tests.
-- [ ] **M2.4** (3 h) Time: parsing fixed `+01:00` source times, UTC normalisation, 10-minute
+- [x] **M2.4** (3 h) Time: parsing fixed `+01:00` source times, UTC normalisation, 10-minute
   alignment, and property tests across daylight-saving boundaries.
 - [ ] **M2.5** (3 h) Series identity: UUIDv5 scheme over the identifying attributes, a
   human-readable key, and stability tests.
