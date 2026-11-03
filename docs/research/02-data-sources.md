@@ -248,7 +248,7 @@ Matching RIVM's 23 surface water intakes with the RWS chloride series that were 
 | Nieuwegein, Lekkanaal (Waternet) | `nieuwegein.lekkanaal` | 0.6 km |
 | Lekkerkerk (Oasen) | `kinderdijk.lek` | 1.2 km |
 | Scheelhoek, Haringvliet (Evides) | `haringvliet.2`, `haringvliet.4` | 1.2–1.3 km |
-| Eleven other Oasen sites, Lek at Bergambacht (Dunea), Loosdrecht (Waternet) | `kinderdijk.lek` or `nieuwegein.lekkanaal` | 2.4–19 km |
+| Ten other Oasen sites, Lek at Bergambacht (Dunea), Loosdrecht (Waternet) | `kinderdijk.lek` or `nieuwegein.lekkanaal` | 2.4–19 km |
 | Brakel, Afgedamde Maas (Dunea); Gat van de Kerksloot, Amer (Evides) | none on the same water | > 20 km |
 | Heel and Roosteren (WML, Meuse) | none | > 100 km |
 | Engelse Werk and Weerseloseweg (Vitens), de Punt (WBG) | none | > 40 km |
