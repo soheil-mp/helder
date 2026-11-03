@@ -47,3 +47,12 @@ repos:
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
+
+  - repo: local
+    hooks:
+      - id: dependency-policy
+        name: dependency licences and no-ML scope (ADR-0002)
+        entry: uv run --no-sync python -m tools.check_dependencies --lock
+        language: system
+        files: ^(uv\.lock|tools/check_dependencies\.py)$
+        pass_filenames: false

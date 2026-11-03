@@ -18,11 +18,16 @@ fmt:
     uv run ruff format .
     uv run ruff check --fix .
 
-# Lint, check formatting and import boundaries
-lint:
+# Lint, check formatting, import boundaries and the dependency policy
+lint: deps
     uv run ruff check .
     uv run ruff format --check .
     uv run lint-imports
+
+# Check dependency licences and the no-ML policy (ADR-0002)
+deps:
+    uv run python -m tools.check_dependencies --lock
+    uv run python -m tools.check_dependencies
 
 # Type-check everything in strict mode
 typecheck:
