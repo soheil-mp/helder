@@ -1,8 +1,10 @@
 # Roadmap
 
-> **Status (2026-11-03):** planning is complete: domain research, data sources verified
-> against the live services, technology landscape, twenty ADRs and the target architecture
-> (M0.1–M0.4). The next item is **M0.5**, the Python workspace.
+> **Status (2026-11-03):** the engineering foundations (M0) are complete: uv workspace with
+> eleven packages, strict linting and typing, import boundaries, a dependency and no-ML policy,
+> CI, documentation site, release automation and community files. In the domain core, RWS time
+> handling (M2.4) is done. The next items are **M1.1–M1.2**, the first slice of the walking
+> skeleton.
 
 Helder is built in ten phases and 28 milestones. A thin end-to-end slice comes first (M1), and
 every later milestone deepens one stage of that slice, so the platform works from early on and
@@ -968,3 +970,4 @@ Optional work after 1.0 or when a milestone finishes early. Not counted in the t
 | Date | Items | Hours | Notes |
 | :-- | :-- | --: | :-- |
 | 2026-11-03 | M0.1–M0.4 | 22 | Repository bootstrap; research verified against the live services (RWS, RIVM, EEA, PDOK, BRO, PEGELONLINE); technology landscape; twenty ADRs; architecture; roadmap; repository settings and issue sync scripts |
+| 2026-11-03 | M0.5–M0.13, M2.4 | 29 | Engineering foundations complete: uv workspace (Python 3.13, 11 packages), Ruff, mypy strict, 12 import-linter contracts, dependency licence and no-ML policy, just, mise and devcontainer, extended pre-commit, CI with SHA-pinned actions and gitleaks history scan, Zensical docs with a Pages workflow, community files, release-please and CITATION.cff, OpenSSF Scorecard; RWS time handling with property tests |

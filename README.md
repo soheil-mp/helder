@@ -13,9 +13,9 @@ lakes, the coast, bathing sites, groundwater and drinking water. It checks every
 standard quality tests and judges it against the right legal norm, citing the source. It
 publishes the results as open APIs, alert feeds and a public dashboard.
 
-> **Status:** planning complete, implementation starting. The research, architecture,
-> decisions and a roadmap of 1,049 hours are in this repository; one example already reads
-> live data. See [Status and plans](#status-and-plans).
+> **Status:** planning and engineering foundations complete; the walking skeleton is next.
+> The research, architecture, decisions and a 1,049-hour roadmap are in this repository, and
+> one example already reads live data. See [Status and plans](#status-and-plans).
 
 ## Why
 
@@ -138,14 +138,16 @@ Done:
 - Research verified against the live services on 2026-11-03, including measured response
   sizes, time-zone pitfalls and how many intakes have a live sensor nearby.
 - Twenty architecture decision records and the target architecture.
-- Repository hygiene: secret scanning, linting and Conventional Commits in pre-commit, plus
-  repository settings and roadmap issues as code.
+- Engineering foundations: a Python 3.13 uv workspace of eleven packages with enforced
+  boundaries, strict linting and typing, a dependency licence and no-ML policy, CI, a
+  documentation site, release automation, community files and supply-chain checks.
+- Time handling for Rijkswaterstaat's fixed-offset and mislabelled timestamps, with property
+  tests.
 - A working example that reads live data within a strict size budget.
 
-Next: the engineering foundations (M0.5–M0.13), then the walking skeleton (M1), which carries
-one real signal from Rijkswaterstaat through Kafka, quality control, DuckLake, dbt and the API
-to a chart. All work ahead is in [ROADMAP.md](ROADMAP.md) and the
-[open issues](https://github.com/soheil-mp/helder/issues).
+Next: the walking skeleton (M1), which carries one real signal from Rijkswaterstaat through
+Kafka, quality control, DuckLake, dbt and the API to a chart. All work ahead is in
+[ROADMAP.md](ROADMAP.md) and the [open issues](https://github.com/soheil-mp/helder/issues).
 
 ## License
 
