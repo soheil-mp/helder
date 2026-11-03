@@ -234,3 +234,27 @@ does not ingest it and links to zwemwater.nl for official advice instead
 - A nightly, opt-in **live contract suite** calls each source once with the smallest valid
   request and checks the response against its schema, so upstream changes show up as one red
   check instead of silent data drift.
+
+<a id="intake-coverage"></a>
+
+## 13. How well are drinking water intakes covered by live sensors?
+
+Matching RIVM's 23 surface water intakes with the RWS chloride series that were live on
+2026-11-03 (straight-line distance, computed with pyproj from RD New and ETRS89 coordinates):
+
+| Intake (company) | Nearest live chloride sensor | Distance |
+| :-- | :-- | --: |
+| Andijk, IJsselmeer (PWN) | `andijk` | 0.3 km |
+| Nieuwegein, Lekkanaal (Waternet) | `nieuwegein.lekkanaal` | 0.6 km |
+| Lekkerkerk (Oasen) | `kinderdijk.lek` | 1.2 km |
+| Scheelhoek, Haringvliet (Evides) | `haringvliet.2`, `haringvliet.4` | 1.2–1.3 km |
+| Other Oasen sites on the Lek, Lek at Bergambacht (Dunea) | `kinderdijk.lek` | 2.4–16 km |
+| Brakel, Afgedamde Maas (Dunea); Gat van de Kerksloot, Amer (Evides) | none on the same water | > 20 km |
+| Heel and Roosteren (WML, Meuse) | none | > 100 km |
+| Engelse Werk and Weerseloseweg (Vitens), de Punt (WBG) | none | > 40 km |
+
+Only five sensors lie within 1.5 km of an intake, and the Meuse intakes have no live chloride
+sensor at all. Distance along the water, not in a straight line, decides relevance, so
+M3.6 builds reviewed station-to-intake links, and the dashboard states the coverage gap
+instead of hiding it. `examples/latest_chloride.py` prints the current values of the five
+nearby sensors.
