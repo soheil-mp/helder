@@ -1,6 +1,6 @@
 [project]
 name = "helder-alerts"
-version = "0.0.0"
+version = "0.1.0"
 description = "Alert engine: rules, state machines, CAP 1.2 messages, CloudEvents and ntfy."
 readme = "README.md"
 requires-python = ">=3.13,<3.14"

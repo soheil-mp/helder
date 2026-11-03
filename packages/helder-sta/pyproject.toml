@@ -1,6 +1,6 @@
 [project]
 name = "helder-sta"
-version = "0.0.0"
+version = "0.1.0"
 description = "Loader that maps the registry and observations to OGC SensorThings entities."
 readme = "README.md"
 requires-python = ">=3.13,<3.14"

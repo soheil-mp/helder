@@ -1,14 +1,15 @@
 cff-version: 1.2.0
 message: If you use Helder, please cite it using the metadata below.
 type: software
-title: "Helder: real-time water quality for the Netherlands from open data"
+title: 'Helder: real-time water quality for the Netherlands from open data'
 abstract: >-
-  Helder is an open data platform that combines Dutch real-time water quality sensors,
-  laboratory chemistry, bathing water microbiology, groundwater analyses and drinking water
-  quality. It checks every sensor value with QARTOD quality-control tests and physical
-  consistency checks, judges values against norms encoded with their legal force, aggregation
-  rule, validity period and citation, keeps every revision in a bitemporal lakehouse, and
-  publishes results through the OGC SensorThings API, a REST API, CAP alerts and a static
+  Helder is an open data platform that combines Dutch real-time water quality
+  sensors, laboratory chemistry, bathing water microbiology, groundwater
+  analyses and drinking water quality. It checks every sensor value with QARTOD
+  quality-control tests and physical consistency checks, judges values against
+  norms encoded with their legal force, aggregation rule, validity period and
+  citation, keeps every revision in a bitemporal lakehouse, and publishes
+  results through the OGC SensorThings API, a REST API, CAP alerts and a static
   dashboard. It uses no machine learning.
 authors:
   - family-names: Mohammadpour
@@ -16,7 +17,7 @@ authors:
 repository-code: https://github.com/soheil-mp/helder
 url: https://soheil-mp.github.io/helder/
 license: MIT
-version: 0.0.0
+version: 0.1.0
 keywords:
   - water quality
   - Netherlands
