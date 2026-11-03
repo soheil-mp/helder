@@ -1,0 +1,260 @@
+[project]
+name = "helder"
+version = "0.0.0"
+description = "Real-time water quality for the Netherlands from open data: checked sensor streams, norms as code, bathing, drinking and groundwater on a small-data lakehouse."
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "MIT"
+authors = [{ name = "Soheil Mohammadpour" }]
+dependencies = [
+  "helder-core",
+  "helder-qc",
+  "helder-norms",
+  "helder-connectors",
+  "helder-lake",
+  "helder-stream",
+  "helder-sta",
+  "helder-alerts",
+  "helder-pipelines",
+  "helder-api",
+  "helder-cli",
+]
+
+[dependency-groups]
+dev = [
+  "hypothesis>=6.170",
+  "import-linter>=2.15",
+  "mypy>=2.4",
+  "pre-commit>=4.6",
+  "pytest>=9.2",
+  "pytest-cov>=7.0",
+  "ruff>=0.17",
+]
+
+# The workspace root is not a package; it ties the members together (ADR-0017).
+[tool.uv]
+package = false
+default-groups = ["dev"]
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+helder-core = { workspace = true }
+helder-qc = { workspace = true }
+helder-norms = { workspace = true }
+helder-connectors = { workspace = true }
+helder-lake = { workspace = true }
+helder-stream = { workspace = true }
+helder-sta = { workspace = true }
+helder-alerts = { workspace = true }
+helder-pipelines = { workspace = true }
+helder-api = { workspace = true }
+helder-cli = { workspace = true }
+
+# --- Ruff -------------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+src = [
+  "packages/helder-core/src",
+  "packages/helder-qc/src",
+  "packages/helder-norms/src",
+  "packages/helder-connectors/src",
+  "packages/helder-lake/src",
+  "packages/helder-stream/src",
+  "packages/helder-sta/src",
+  "packages/helder-alerts/src",
+  "packages/helder-pipelines/src",
+  "packages/helder-api/src",
+  "packages/helder-cli/src",
+  "tests",
+  "tools",
+  "scripts",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "COM812", # conflicts with the formatter
+  "CPY001", # the licence is in LICENSE; no per-file headers
+  "D203",   # incompatible with D211
+  "D213",   # incompatible with D212
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.isort]
+known-first-party = ["tools", "scripts"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D", "S101", "PLR2004", "ARG001", "INP001"]
+"scripts/**" = ["S603", "S607", "T201"]
+"tools/**" = ["T201"]
+"examples/**" = ["T201", "INP001"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+# --- mypy -------------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unreachable = true
+enable_error_code = ["ignore-without-code", "possibly-undefined", "redundant-expr", "truthy-bool"]
+files = ["packages", "tests", "tools", "scripts", "examples"]
+explicit_package_bases = true
+mypy_path = [
+  "packages/helder-core/src",
+  "packages/helder-qc/src",
+  "packages/helder-norms/src",
+  "packages/helder-connectors/src",
+  "packages/helder-lake/src",
+  "packages/helder-stream/src",
+  "packages/helder-sta/src",
+  "packages/helder-alerts/src",
+  "packages/helder-pipelines/src",
+  "packages/helder-api/src",
+  "packages/helder-cli/src",
+]
+
+# --- pytest and coverage ----------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "9.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = ["--import-mode=importlib", "--strict-markers", "--strict-config", "-ra"]
+xfail_strict = true
+filterwarnings = ["error"]
+markers = [
+  "integration: needs external services such as containers",
+  "e2e: runs end to end through the local stack",
+  "live: calls public sources over the internet (opt-in, never in the default run)",
+  "slow: takes more than a few seconds",
+]
+
+[tool.coverage.run]
+branch = true
+source_pkgs = [
+  "helder_core",
+  "helder_qc",
+  "helder_norms",
+  "helder_connectors",
+  "helder_lake",
+  "helder_stream",
+  "helder_sta",
+  "helder_alerts",
+  "helder_pipelines",
+  "helder_api",
+  "helder_cli",
+]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
+skip_covered = true
+exclude_also = ["if TYPE_CHECKING:", "raise NotImplementedError", "@overload"]
+
+# --- Import boundaries (ADR-0017, docs/architecture.md §3) ----------------------------
+[tool.importlinter]
+include_external_packages = true
+root_packages = [
+  "helder_core",
+  "helder_qc",
+  "helder_norms",
+  "helder_connectors",
+  "helder_lake",
+  "helder_stream",
+  "helder_sta",
+  "helder_alerts",
+  "helder_pipelines",
+  "helder_api",
+  "helder_cli",
+]
+
+[[tool.importlinter.contracts]]
+name = "Core is the foundation and imports no other Helder package"
+type = "forbidden"
+source_modules = ["helder_core"]
+forbidden_modules = ["helder_qc", "helder_norms", "helder_connectors", "helder_lake", "helder_stream", "helder_sta", "helder_alerts", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "Quality control is pure and depends only on core"
+type = "forbidden"
+source_modules = ["helder_qc"]
+forbidden_modules = ["helder_norms", "helder_connectors", "helder_lake", "helder_stream", "helder_sta", "helder_alerts", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "Norms are pure and depend only on core"
+type = "forbidden"
+source_modules = ["helder_norms"]
+forbidden_modules = ["helder_qc", "helder_connectors", "helder_lake", "helder_stream", "helder_sta", "helder_alerts", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "Connectors depend only on core"
+type = "forbidden"
+source_modules = ["helder_connectors"]
+forbidden_modules = ["helder_qc", "helder_norms", "helder_lake", "helder_stream", "helder_sta", "helder_alerts", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "Lake access depends only on core"
+type = "forbidden"
+source_modules = ["helder_lake"]
+forbidden_modules = ["helder_qc", "helder_norms", "helder_connectors", "helder_stream", "helder_sta", "helder_alerts", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "Stream apps use core, quality control and lake access only"
+type = "forbidden"
+source_modules = ["helder_stream"]
+forbidden_modules = ["helder_norms", "helder_connectors", "helder_sta", "helder_alerts", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "The SensorThings loader depends only on core"
+type = "forbidden"
+source_modules = ["helder_sta"]
+forbidden_modules = ["helder_qc", "helder_norms", "helder_connectors", "helder_lake", "helder_stream", "helder_alerts", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "The alert engine depends only on core and norms"
+type = "forbidden"
+source_modules = ["helder_alerts"]
+forbidden_modules = ["helder_qc", "helder_connectors", "helder_lake", "helder_stream", "helder_sta", "helder_pipelines", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "Pipelines orchestrate connectors, lake, QC and norms, never the API or stream apps"
+type = "forbidden"
+source_modules = ["helder_pipelines"]
+forbidden_modules = ["helder_stream", "helder_sta", "helder_alerts", "helder_api", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "The API reads the lake and norms; it never ingests or processes"
+type = "forbidden"
+source_modules = ["helder_api"]
+forbidden_modules = ["helder_qc", "helder_connectors", "helder_stream", "helder_sta", "helder_alerts", "helder_pipelines", "helder_cli"]
+
+[[tool.importlinter.contracts]]
+name = "The CLI drives pipelines only"
+type = "forbidden"
+source_modules = ["helder_cli"]
+forbidden_modules = ["helder_qc", "helder_norms", "helder_connectors", "helder_lake", "helder_stream", "helder_sta", "helder_alerts", "helder_api"]
+
+[[tool.importlinter.contracts]]
+name = "Core, QC and norms perform no I/O (ADR-0007, ADR-0013)"
+type = "forbidden"
+source_modules = ["helder_core", "helder_qc", "helder_norms"]
+forbidden_modules = [
+  "httpx",
+  "requests",
+  "urllib",
+  "socket",
+  "duckdb",
+  "psycopg",
+  "confluent_kafka",
+  "quixstreams",
+  "dagster",
+  "fastapi",
+]

@@ -1,0 +1,15 @@
+[project]
+name = "helder-lake"
+version = "0.0.0"
+description = "DuckLake access: bitemporal tables, budgets and exports."
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "MIT"
+authors = [{ name = "Soheil Mohammadpour" }]
+dependencies = [
+    "helder-core",
+]
+
+[build-system]
+requires = ["uv_build>=0.13,<0.14"]
+build-backend = "uv_build"

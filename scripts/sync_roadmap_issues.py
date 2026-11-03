@@ -26,6 +26,10 @@ import sys
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from collections.abc import Mapping
 
 ROADMAP = Path(__file__).resolve().parent.parent / "ROADMAP.md"
 DEFAULT_REPO = "soheil-mp/helder"
@@ -182,7 +186,7 @@ def issue_body(item: Item, milestone: Milestone, repo: str) -> str:
     return "\n".join(parts)
 
 
-def gh(*args: str, payload: dict[str, object] | None = None) -> object:
+def gh(*args: str, payload: Mapping[str, object] | None = None) -> object:
     """Call the GitHub API through ``gh api`` and return the parsed JSON."""
     cmd = ["gh", "api", *args]
     data = None

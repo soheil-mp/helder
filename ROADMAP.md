@@ -56,7 +56,7 @@ gets better with each step.
 |  | [M27 Documentation, write-up and 1.0](#m27--documentation-write-up-and-10) | 8 | 28 | v1.0.0 |
 | | **Total** | **308** | **1,049** | |
 
-**Done:** 22 h (M0.1–M0.4). **Open:** 1,027 h. With 15 % contingency the total is about 1,206 hours:
+**Done:** 27 h (5 of 308 items). **Open:** 1,022 h. With 15 % contingency the total is about 1,206 hours:
 roughly 10 to 11 months at 25 hours a week.
 <!-- summary:end -->
 
@@ -179,7 +179,7 @@ released automatically.
   protection, private vulnerability reporting, topics and labels.
 - [x] **M0.4** (3 h) Roadmap-to-issues sync (`scripts/sync_roadmap_issues.py`): milestones,
   labels and one issue per open item, idempotent, closes issues for ticked items.
-- [ ] **M0.5** (5 h) uv workspace with the eleven packages from
+- [x] **M0.5** (5 h) uv workspace with the eleven packages from
   [ADR-0017](docs/adr/0017-python-toolchain-monorepo.md); Python 3.13 pin and `uv.lock`; Ruff,
   mypy (strict), pytest with Hypothesis and branch coverage failing under 85 %; import-linter
   contracts for the dependency rules.

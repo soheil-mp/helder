@@ -1,0 +1,15 @@
+[project]
+name = "helder-norms"
+version = "0.0.0"
+description = "Norm registry and assessment engine: norms as code with legal provenance (pure, no I/O)."
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "MIT"
+authors = [{ name = "Soheil Mohammadpour" }]
+dependencies = [
+    "helder-core",
+]
+
+[build-system]
+requires = ["uv_build>=0.13,<0.14"]
+build-backend = "uv_build"
