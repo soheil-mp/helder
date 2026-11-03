@@ -1,5 +1,12 @@
 # Helder
 
+[![CI](https://github.com/soheil-mp/helder/actions/workflows/ci.yml/badge.svg)](https://github.com/soheil-mp/helder/actions/workflows/ci.yml)
+[![Docs](https://github.com/soheil-mp/helder/actions/workflows/docs.yml/badge.svg)](https://soheil-mp.github.io/helder/)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/soheil-mp/helder/badge)](https://scorecard.dev/viewer/?uri=github.com/soheil-mp/helder)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](.python-version)
+[![Conventional Commits](https://img.shields.io/badge/commits-conventional-fe5196.svg)](https://www.conventionalcommits.org/)
+
 *Helder* is Dutch for "clear". Helder is an open data platform that watches water quality in
 the Netherlands in near real time. It collects public sensor and laboratory data about rivers,
 lakes, the coast, bathing sites, groundwater and drinking water. It checks every value with

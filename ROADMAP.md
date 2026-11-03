@@ -56,7 +56,7 @@ gets better with each step.
 |  | [M27 Documentation, write-up and 1.0](#m27--documentation-write-up-and-10) | 8 | 28 | v1.0.0 |
 | | **Total** | **308** | **1,049** | |
 
-**Done:** 46 h (12 of 308 items). **Open:** 1,003 h. With 15 % contingency the total is about 1,206 hours:
+**Done:** 48 h (13 of 308 items). **Open:** 1,001 h. With 15 % contingency the total is about 1,206 hours:
 roughly 10 to 11 months at 25 hours a week.
 <!-- summary:end -->
 
@@ -202,7 +202,7 @@ released automatically.
   and CODEOWNERS.
 - [x] **M0.12** (2 h) Releases: release-please with Conventional Commits, CHANGELOG and a
   `CITATION.cff` validated in pre-commit.
-- [ ] **M0.13** (2 h) OpenSSF Scorecard workflow, Dependabot security alerts and a badge row
+- [x] **M0.13** (2 h) OpenSSF Scorecard workflow, Dependabot security alerts and a badge row
   in the README.
 
 **Exit criteria:** a pull request that breaks formatting, lint, types, tests, licences or the
