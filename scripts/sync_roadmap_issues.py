@@ -200,11 +200,16 @@ def gh(*args: str, payload: Mapping[str, object] | None = None) -> object:
 
 
 def gh_paged(path: str) -> list[dict[str, object]]:
-    """Fetch every page of a list endpoint."""
-    pages = gh("--paginate", "--slurp", path)
-    if not isinstance(pages, list):
-        sys.exit(f"Unexpected response for {path}")
-    return [entry for page in pages for entry in page]
+    """Fetch every page of a list endpoint.
+
+    Uses ``--jq '.[]'`` (one JSON object per line) rather than ``--slurp``, which older GitHub
+    CLI versions do not support.
+    """
+    cmd = ["gh", "api", "--paginate", "--jq", ".[]", path]
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+    if result.returncode != 0:
+        sys.exit(f"gh api {path} failed: {result.stderr.strip()}")
+    return [json.loads(line) for line in result.stdout.splitlines() if line.strip()]
 
 
 @dataclass
