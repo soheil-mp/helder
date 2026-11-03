@@ -132,7 +132,7 @@ antilog(μ + 1.282σ). A water that misses "sufficient" is "poor". RWS reports c
 
 The European Environment Agency publishes the official classification of all **757 Dutch bathing
 waters** for 2015–2025 (**verified**, EEA ArcGIS service), which lets Helder check its own
-classification against the official one ([M15](../../ROADMAP.md#m15--bathing-water-and-cyanobacteria)).
+classification against the official one ([M15](https://github.com/soheil-mp/helder/blob/main/ROADMAP.md#m15--bathing-water-and-cyanobacteria)).
 
 ### 3.5 Cyanobacteria (blue-green algae)
 
@@ -154,7 +154,7 @@ from the local discharge and represents the difference between the wave's travel
 mean flow velocity with a **lag coefficient**. CHR reports an accuracy of about 89 % for travel
 time and 95 % for concentration after calibration with tracer tests. The ICPR is preparing a new
 travel-time model, expected by 2027. Helder implements a transparent, simplified advection model
-in the same spirit ([M16](../../ROADMAP.md#m16--upstream-early-warning-and-travel-time)); it is
+in the same spirit ([M16](https://github.com/soheil-mp/helder/blob/main/ROADMAP.md#m16--upstream-early-warning-and-travel-time)); it is
 an indication, not an operational forecast.
 
 ### 3.7 Voluntary targets for drinking water sources

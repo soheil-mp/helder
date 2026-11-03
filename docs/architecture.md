@@ -3,7 +3,7 @@
 This document describes the target architecture of Helder in the arc42 spirit: goals and
 constraints, context, building blocks, runtime flows, data design, deployment and cross-cutting
 concerns. Decisions are explained in the [ADRs](adr/README.md); the order of construction is
-in [ROADMAP.md](../ROADMAP.md).
+in [ROADMAP.md](https://github.com/soheil-mp/helder/blob/main/ROADMAP.md).
 
 ## 1. Goals and quality attributes
 
@@ -271,4 +271,4 @@ The budget guard compares live usage with these numbers and fails closed.
 
 ## 8. Risks
 
-See the risk register in [ROADMAP.md](../ROADMAP.md#risks-and-mitigations).
+See the risk register in [ROADMAP.md](https://github.com/soheil-mp/helder/blob/main/ROADMAP.md#risks-and-mitigations).

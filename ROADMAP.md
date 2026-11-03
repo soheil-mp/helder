@@ -56,7 +56,7 @@ gets better with each step.
 |  | [M27 Documentation, write-up and 1.0](#m27--documentation-write-up-and-10) | 8 | 28 | v1.0.0 |
 | | **Total** | **308** | **1,049** | |
 
-**Done:** 41 h (10 of 308 items). **Open:** 1,008 h. With 15 % contingency the total is about 1,206 hours:
+**Done:** 44 h (11 of 308 items). **Open:** 1,005 h. With 15 % contingency the total is about 1,206 hours:
 roughly 10 to 11 months at 25 hours a week.
 <!-- summary:end -->
 
@@ -194,7 +194,7 @@ released automatically.
   check; a `require-ci` ruleset.
 - [x] **M0.9** (2 h) Extend pre-commit with Ruff, mypy, import-linter, uv-lock, actionlint,
   ShellCheck, hadolint, yamllint and check-jsonschema.
-- [ ] **M0.10** (3 h) Documentation site with Zensical in the Diátaxis structure (tutorials,
+- [x] **M0.10** (3 h) Documentation site with Zensical in the Diátaxis structure (tutorials,
   how-to guides, reference, explanation), research and ADR pages, deployed to GitHub Pages by a
   workflow.
 - [x] **M0.11** (2 h) Community files: CONTRIBUTING, CODE_OF_CONDUCT, SECURITY (private

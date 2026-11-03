@@ -52,6 +52,14 @@ check: lint typecheck test
 budget:
     @grep -E '^HELDER_.*BUDGET' .env 2>/dev/null || grep -E '^HELDER_.*BUDGET' .env.example
 
+# Serve the documentation site locally with live reload
+docs:
+    uv run --group docs zensical serve
+
+# Build the documentation site in strict mode into site/
+docs-build:
+    uv run --group docs zensical build --strict --clean
+
 # Print live chloride values at drinking water intakes (a few kilobytes from Rijkswaterstaat)
 chloride *args:
     python3 examples/latest_chloride.py {{ args }}

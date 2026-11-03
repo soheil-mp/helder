@@ -112,6 +112,9 @@ drinking water company and RIVM.
 
 ## Documentation
 
+The documentation site is at <https://soheil-mp.github.io/helder/> (tutorials, how-to guides,
+reference and explanation). The main documents:
+
 - [Domain research](docs/research/01-water-quality-domain.md): who measures what, the legal
   norms, parameters, physics, statistics and observed data problems.
 - [Data sources](docs/research/02-data-sources.md): endpoints verified against the live

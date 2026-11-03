@@ -30,6 +30,9 @@ dev = [
   "pytest-cov>=7.0",
   "ruff>=0.17",
 ]
+docs = [
+    "zensical>=0.0.74",
+]
 
 # The workspace root is not a package; it ties the members together (ADR-0017).
 [tool.uv]

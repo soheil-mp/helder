@@ -1,0 +1,120 @@
+[project]
+site_name = "Helder"
+site_description = "Real-time water quality for the Netherlands from open data: checked sensor streams, norms as code, bathing, drinking and groundwater on a small-data lakehouse."
+site_author = "Soheil Mohammadpour"
+site_url = "https://soheil-mp.github.io/helder/"
+copyright = "Copyright &copy; 2026 Soheil Mohammadpour. MIT licence. Data remains under the terms of its sources."
+repo_url = "https://github.com/soheil-mp/helder"
+repo_name = "soheil-mp/helder"
+edit_uri = "edit/main/docs/"
+docs_dir = "docs"
+site_dir = "site"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Tutorials" = [
+    { "Set up a development environment" = "tutorials/development-setup.md" },
+    { "Read live chloride at drinking water intakes" = "tutorials/read-live-chloride.md" },
+  ] },
+  { "How-to guides" = [
+    { "Add a dependency" = "how-to/add-a-dependency.md" },
+    { "Sync the roadmap to issues" = "how-to/sync-roadmap-issues.md" },
+    { "Apply the repository settings" = "how-to/apply-repository-settings.md" },
+  ] },
+  { "Reference" = [
+    { "Commands" = "reference/commands.md" },
+    { "Environment variables" = "reference/environment.md" },
+  ] },
+  { "Explanation" = [
+    { "Architecture" = "architecture.md" },
+    { "Research: water quality" = "research/01-water-quality-domain.md" },
+    { "Research: data sources" = "research/02-data-sources.md" },
+    { "Research: technology" = "research/03-technology-landscape.md" },
+    { "Decision records" = [
+      { "Overview" = "adr/README.md" },
+      { "0001 Record architecture decisions" = "adr/0001-record-architecture-decisions.md" },
+      { "0002 Deterministic, rule-based processing; no machine learning" = "adr/0002-deterministic-rule-based-processing.md" },
+      { "0003 Small data by design, with enforced budgets" = "adr/0003-small-data-by-design.md" },
+      { "0004 Aquo vocabulary inside an observations-and-measurements model" = "adr/0004-aquo-and-sensorthings-data-model.md" },
+      { "0005 Poll RWS with the WFS latest layer; backfill gaps with the API" = "adr/0005-rws-polling-strategy.md" },
+      { "0006 Kafka 4 with a schema registry and CloudEvents as the event backbone" = "adr/0006-kafka-event-backbone.md" },
+      { "0007 Quix Streams with a shared, pure QC library" = "adr/0007-quix-streams-shared-qc-library.md" },
+      { "0008 DuckLake on PostgreSQL and S3-compatible storage" = "adr/0008-ducklake-lakehouse.md" },
+      { "0009 Bitemporal observations that keep every revision" = "adr/0009-bitemporal-observations.md" },
+      { "0010 Dagster for orchestration" = "adr/0010-dagster-orchestration.md" },
+      { "0011 dbt-core for SQL transformations" = "adr/0011-dbt-transformations.md" },
+      { "0012 QARTOD tests and flags for sensor quality control" = "adr/0012-qartod-quality-flags.md" },
+      { "0013 Norms as code, with legal provenance and validity dates" = "adr/0013-norms-as-code.md" },
+      { "0014 Data contracts and schemas change before code" = "adr/0014-data-contracts-and-schemas.md" },
+      { "0015 OGC SensorThings for observations, FastAPI for derived products" = "adr/0015-sensorthings-and-fastapi-serving.md" },
+      { "0016 Alerts as CAP 1.2, CloudEvents and anonymous push" = "adr/0016-alerts-cap-and-cloudevents.md" },
+      { "0017 Python 3.13 uv monorepo with strict tooling" = "adr/0017-python-toolchain-monorepo.md" },
+      { "0018 Compose for development, Kubernetes with GitOps for production-like runs" = "adr/0018-kubernetes-gitops.md" },
+      { "0019 A static dashboard on GitHub Pages with DuckDB-WASM" = "adr/0019-static-dashboard-duckdb-wasm.md" },
+      { "0020 Privacy, attribution and source terms by construction" = "adr/0020-privacy-attribution-and-source-terms.md" },
+    ] },
+  ] },
+  { "Roadmap" = "https://github.com/soheil-mp/helder/blob/main/ROADMAP.md" },
+]
+
+[project.theme]
+language = "en"
+features = [
+  "content.action.edit",
+  "content.action.view",
+  "content.code.copy",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "blue"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "blue"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/soheil-mp/helder"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tasklist.custom_checkbox = true

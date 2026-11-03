@@ -143,7 +143,7 @@ on). The DISCODATA SQL endpoint (`discodata.eea.europa.eu/sql`) answered scripte
 `403 Forbidden` from its application gateway, so Helder uses the ArcGIS service.
 
 Use: the reference for reconciling Helder's own BWD classification
-([M15](../../ROADMAP.md#m15--bathing-water-and-cyanobacteria)).
+([M15](https://github.com/soheil-mp/helder/blob/main/ROADMAP.md#m15--bathing-water-and-cyanobacteria)).
 
 <a id="pdok"></a>
 
