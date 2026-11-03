@@ -1,0 +1,7 @@
+# Tool versions for contributors who use mise (https://mise.jdx.dev). CI and the devcontainer
+# pin the same versions; Renovate keeps them in sync.
+[tools]
+python = "3.13"
+uv = "0.13.6"
+just = "1.59.0"
+node = "22"

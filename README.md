@@ -81,12 +81,14 @@ python3 examples/latest_chloride.py          # sensors within 1.5 km of a drinki
 python3 examples/latest_chloride.py --all    # every chloride series updated in the last hour
 ```
 
-For development:
+For development you need [uv](https://docs.astral.sh/uv/) and [just](https://just.systems/)
+(or open the repository in the devcontainer, which has both):
 
 ```sh
-pip install pre-commit        # or: uv tool install pre-commit
-pre-commit install --hook-type pre-commit --hook-type commit-msg
+just setup                    # Python 3.13 workspace, dev tools and git hooks
+just check                    # lint, import boundaries, strict types and tests, as in CI
 cp .env.example .env          # local settings; never commit .env
+just                          # list every task
 ```
 
 Once the walking skeleton lands (M1), `just up` starts the local platform with Docker Compose

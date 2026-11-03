@@ -56,7 +56,7 @@ gets better with each step.
 |  | [M27 Documentation, write-up and 1.0](#m27--documentation-write-up-and-10) | 8 | 28 | v1.0.0 |
 | | **Total** | **308** | **1,049** | |
 
-**Done:** 27 h (5 of 308 items). **Open:** 1,022 h. With 15 % contingency the total is about 1,206 hours:
+**Done:** 29 h (6 of 308 items). **Open:** 1,020 h. With 15 % contingency the total is about 1,206 hours:
 roughly 10 to 11 months at 25 hours a week.
 <!-- summary:end -->
 
@@ -183,7 +183,7 @@ released automatically.
   [ADR-0017](docs/adr/0017-python-toolchain-monorepo.md); Python 3.13 pin and `uv.lock`; Ruff,
   mypy (strict), pytest with Hypothesis and branch coverage failing under 85 %; import-linter
   contracts for the dependency rules.
-- [ ] **M0.6** (2 h) `justfile` (`setup`, `fmt`, `lint`, `typecheck`, `test`, `docs`, `up`,
+- [x] **M0.6** (2 h) `justfile` (`setup`, `fmt`, `lint`, `typecheck`, `test`, `docs`, `up`,
   `down`, `e2e`, `budget`), `mise.toml` for tool versions and a devcontainer.
 - [ ] **M0.7** (3 h) Dependency policy: `tools/check_dependencies.py` fails on licences outside
   the allowlist and on any ML library, model runtime, model API client or vector database;
