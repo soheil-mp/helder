@@ -143,7 +143,7 @@ on). The DISCODATA SQL endpoint (`discodata.eea.europa.eu/sql`) answered scripte
 `403 Forbidden` from its application gateway, so Helder uses the ArcGIS service.
 
 Use: the reference for reconciling Helder's own BWD classification
-([M11](../../ROADMAP.md#m11--bathing-water-and-cyanobacteria)).
+([M15](../../ROADMAP.md#m15--bathing-water-and-cyanobacteria)).
 
 <a id="pdok"></a>
 
@@ -157,7 +157,7 @@ All through OGC API Features (`https://api.pdok.nl/<owner>/<dataset>/ogc/v1`) un
 | `rws/richtlijn-stedelijk-afvalwater` | `rsa_rwzi`, `rsa_lozingspunten`, `rsa_agglomeraties`, `rsa_kwetsbaargebied` | Waste water treatment plants and outfalls upstream of intakes and bathing sites |
 | `hwh/waterschappen-waterbeheergebieden-imwa` | Water board management areas | Which authority manages a location |
 | `hwh/waterschappen-oppervlaktewateren-imwa` | Regional surface waters | Context on maps |
-| `rws/vervoersnetwerken-waterwegen-netwerk` | Waterway network | River graph for travel time (M12) |
+| `rws/vervoersnetwerken-waterwegen-netwerk` | Waterway network | River graph for travel time (M16) |
 | `tno/bro-grondwatermonitoring-in-samenhang-karakteristieken` | `gm_gar`, `gm_gmw`, `gm_gmw_monitoringtube`, `gm_gmn` | Spatial index of groundwater analyses |
 
 <a id="bro"></a>

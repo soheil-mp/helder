@@ -132,7 +132,7 @@ antilog(μ + 1.282σ). A water that misses "sufficient" is "poor". RWS reports c
 
 The European Environment Agency publishes the official classification of all **757 Dutch bathing
 waters** for 2015–2025 (**verified**, EEA ArcGIS service), which lets Helder check its own
-classification against the official one ([M11](../../ROADMAP.md#m11--bathing-water-and-cyanobacteria)).
+classification against the official one ([M15](../../ROADMAP.md#m15--bathing-water-and-cyanobacteria)).
 
 ### 3.5 Cyanobacteria (blue-green algae)
 
@@ -141,7 +141,7 @@ replacing the 2012 protocol. It treats all cyanobacteria as potentially toxic an
 managers monitor either fluorescence corrected for the fraction of potentially toxic
 cyanobacteria, or biovolume converted to a cyanobacteria-associated chlorophyll-a concentration,
 which is then compared with the protocol's risk levels. The thresholds and the role of scum
-layers are **to transcribe** from the report (M11.6). RWS publishes observations of cyanobacteria
+layers are **to transcribe** from the report (M15.6). RWS publishes observations of cyanobacteria
 scum layers (`AANWZHD`/`CYANBTRDLG`) at 278 locations and microcystin concentrations at 26
 (**verified** in the catalogue). Helder reports these observations and the protocol's levels; it
 does not issue swimming advice, which is the job of the provinces.
@@ -154,7 +154,7 @@ from the local discharge and represents the difference between the wave's travel
 mean flow velocity with a **lag coefficient**. CHR reports an accuracy of about 89 % for travel
 time and 95 % for concentration after calibration with tracer tests. The ICPR is preparing a new
 travel-time model, expected by 2027. Helder implements a transparent, simplified advection model
-in the same spirit ([M12](../../ROADMAP.md#m12--upstream-early-warning-and-travel-time)); it is
+in the same spirit ([M16](../../ROADMAP.md#m16--upstream-early-warning-and-travel-time)); it is
 an indication, not an operational forecast.
 
 ### 3.7 Voluntary targets for drinking water sources
@@ -162,7 +162,7 @@ an indication, not an operational forecast.
 The drinking water suppliers of the large European rivers publish the **European River
 Memorandum (ERM, 2020)** with target values for river water used for drinking water. They are
 not legal norms. Helder can show them as a separate, clearly labelled yardstick (values **to
-transcribe**, M9.8).
+transcribe**, M13.8).
 
 ## 4. Parameters
 
